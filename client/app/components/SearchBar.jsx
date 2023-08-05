@@ -1,14 +1,21 @@
 import React from "react";
 import { View, TextInput, StyleSheet } from "react-native";
-
 import { Ionicons } from "@expo/vector-icons";
 
+import axios, { Axios } from "axios";
 import colors from "../config/colors";
 
-function SearchBar({ icon, ...otherProps }) {
+function SearchBar({ icon, onSearch }) {
+  [search, setSearch] = useState("");
+
+  const handleSearch = async () => {
+    
+
+  };
+
   return (
     <View style={styles.bar}>
-      {icon && <Ionicons name={icon} size={24} style={styles.star} />}
+      {icon && <Ionicons name={icon} size={24} style={styles.search} />}
       <TextInput style={styles.textInput} {...otherProps} />
     </View>
   );
@@ -19,15 +26,14 @@ const styles = StyleSheet.create({
     backgroundColor: colors.lightGray,
     borderRadius: 25,
     flexDirection: "row",
-    width: "100%",
-    padding: 15,
-    marginVertical: 10,
+    padding: 10,
+    width: "50%",
   },
   textInput: {
     fontSize: 18,
     fontFamily: "Roboto",
   },
-  star: {
+  search: {
     marginRight: 10,
   },
 });

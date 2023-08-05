@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from "react-native";
 import Screen from "../components/Screen";
 import SearchBar from "../components/SearchBar";
 
-function PlayerScreen({ navigation }) {
+function PlayerScreen() {
   return (
     <Screen>
       <View style={styles.screenContainer}>
@@ -16,9 +16,10 @@ function PlayerScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   screenContainer: {
-    backgroundColor: "white",
+    backgroundColor: "black",
     alignItems: "center",
     justifyContent: "center",
+    flex: 1,
   },
 });
 
